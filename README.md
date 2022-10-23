@@ -1,9 +1,9 @@
 # DS 6306 - Beer Project
 
 ## Project Description
-We want to analyze 2 datasets(beer.csv and breweries.csv) to gain actionable insights to present to the CEO and CFO of Budweiser. Budweiser has hired us to answer some questions. We will perform Exploratory Data Analysis to answer the questions that they are interested in, all of which are listed down below.
+We want to analyze 2 datasets(totalbeer.csv and totalbreweries.csv) to gain actionable insights to present to the CEO and CFO of Budweiser. Budweiser has hired us to answer some questions. We will perform Exploratory Data Analysis to answer the questions that they are interested in, all of which are listed down below.
 
-The powerpoint was done as group with my partners: Anthony Burton-Cordova, Yixiao Deng, & Xavier Mojica.
+The powerpoint was done as a group with my partners: Anthony Burton-Cordova, Yixiao Deng, & Xavier Mojica.
 
 The entire process will be done in R.
 
