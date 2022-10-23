@@ -126,6 +126,7 @@ The code below creates a new column that seperate the beer into 2 categories, "A
 mergedBall= mergedB %>% filter(grepl("IPA|Ale", Style))
 mergedBall
 
+# create new column called group to seperate Ale and IPA without specific name
 for (i in 1:length(mergedBall$Style)){
   if (grepl("IPA", mergedBall$Style[i])){
     mergedBall$group[i]= "IPA"
@@ -159,6 +160,7 @@ In our bar chart, we can see that New Jersey has the highest mean ABV for Ale at
 
 The code below summarizes the median ABV of each state of each group for us for us. Afterward it plots the mean ABV of each state in descending order.
 ```{r}
+#If you want to make an Ale here are the states you should market to
 df = mergedBall %>% filter(group == "Ale") %>% group_by(State)%>% summarise(meanABV = mean(ABV)) %>% arrange(desc(meanABV))
 ggplot(df, aes(x = reorder(State, -meanABV), y = meanABV)) + geom_bar(stat = "identity")+ theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
