@@ -3,7 +3,7 @@
 ## Project Description
 We want to analyze 2 datasets(beer.csv and breweries.csv) to gain actionable insights to present to the CEO and CFO of Budweiser. Budweiser has hired us to answer some questions. We will perform Exploratory Data Analysis to answer the questions that they are interested in, all of which are listed down below.
 
-The powerpoint was done as group with my partners: Anthony Burton-Cordova, Yixiao Deng, & Xavier Mojica. 
+The powerpoint was done as group with my partners: Anthony Burton-Cordova, Yixiao Deng, & Xavier Mojica.
 
 The entire process will be done in R.
 
@@ -30,7 +30,7 @@ library(caret)
 library(class)
 
 # Google Drive presentation
-Please visit this [link](https://drive.google.com/file/d/1lL2l35GE4Mkpp9VChTK6A7J7VoDW1xrY/view?usp=sharing) for my presentation on this project.
+Please visit this [link](https://drive.google.com/file/d/1J7jVk0x34jSrC-mo0A2ze1lgJp6ig-NJ/view?usp=sharing) for my presentation on this project.
 
 ## Licensing and Acknowledgements
 This was done as a project for Data Science 6306 at Southern Methodist University,
