@@ -20,14 +20,14 @@ In addition, while you have decided to use KNN to investigate this relationship 
 9. Find one other useful inference from the data that you feel Budweiser may be able to find value in.  You must convince them why it is important and back up your conviction with appropriate statistical evidence.
 
 ## Required Packages
-library(dplyr)
-library(ggplot2)
-library(tidyr)
-library(tidyverse)
-library(knitr)
-library(rmarkdown)
-library(caret)
-library(class)
+library(dplyr) <br>
+library(ggplot2) <br>
+library(tidyr) <br>
+library(tidyverse) <br>
+library(knitr) <br>
+library(rmarkdown) <br>
+library(caret) <br>
+library(class) <br>
 
 # Google Drive presentation
 Please visit this [link](https://drive.google.com/file/d/1J7jVk0x34jSrC-mo0A2ze1lgJp6ig-NJ/view?usp=sharing) for my presentation on this project.
