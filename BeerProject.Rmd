@@ -104,7 +104,7 @@ Looking at the histogram distribution, we find that it is right-skewed. Next, we
 
 The code below creates a histogram to plot the distribution of ABV for all the beers and get a summary statistics on the ABV column. 
 ```{r}
-ggplot(mergedB, aes(x = ABV)) + geom_histogram()
+ggplot(mergedB, aes(x = ABV)) + geom_histogram() + ggtitle("ABV Histogram")
 summary(mergedB$ABV)
 ```
 
@@ -140,7 +140,8 @@ trainIndices = sample(1:dim(mergedBall)[1], round(0.75* dim(mergedBall)[1]))
 train = mergedBall[trainIndices,]
 test = mergedBall[-trainIndices,]
 
-mergedBall %>% ggplot(aes(x = IBU, y = ABV, color = group)) + geom_point()
+mergedBall %>% ggplot(aes(x = IBU, y = ABV, color = group)) + geom_point() +
+  ggtitle("Scatterplot: ABV vs. IBU")
 
 #k = 3
 classifications = knn(train[,c(4,5)], test[,c(4,5)], train$group, prob = TRUE, k =3)
@@ -162,9 +163,9 @@ The code below summarizes the median ABV of each state of each group for us for 
 ```{r}
 #If you want to make an Ale here are the states you should market to
 df = mergedBall %>% filter(group == "Ale") %>% group_by(State)%>% summarise(meanABV = mean(ABV)) %>% arrange(desc(meanABV))
-ggplot(df, aes(x = reorder(State, -meanABV), y = meanABV)) + geom_bar(stat = "identity")+ theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+ggplot(df, aes(x = reorder(State, -meanABV), y = meanABV)) + geom_bar(stat = "identity")+ theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) +ggtitle("Avg. ABV By State(Ale)")
 
 #If you want to make an IPA here are the states you should market to 
 df = mergedBall %>% filter(group == "IPA") %>% group_by(State)%>% summarise(meanABV = mean(ABV)) %>% arrange(desc(meanABV))
-ggplot(df, aes(x = reorder(State, -meanABV), y = meanABV)) + geom_bar(stat = "identity")+ theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+ggplot(df, aes(x = reorder(State, -meanABV), y = meanABV)) + geom_bar(stat = "identity")+ theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))+ggtitle("Avg. ABV By State(IPA)")
 ```
